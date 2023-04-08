@@ -1,0 +1,14 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background: #F9F9F9;
+}
+.btn-green {
+    border: 1px solid #4CAE4C;
+    background: #5CB85C;
+}
+.text-active {
+    color : #09D99B !important;
+}
