@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Bridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/responsize.css">
 </head>
 
 <body>
@@ -16,7 +22,7 @@
         <nav class="container navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand text-white fs-5" href="#">Recipes Management</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                <button class="navbar-toggler btn-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -29,7 +35,7 @@
                             <a class="nav-link text-white" href="#">Template</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-active" href="#">Bridge</a>
+                            <a class="nav-link active-bridge" href="#">Bridge</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-0" style="margin : 0 !important">
@@ -47,11 +53,11 @@
             </div>
         </nav>
     </header>
-    <div class="container mt-3  bg-light rounded-3">
-        <nav aria-label="breadcrumb bg-light">
+    <div class="container mt-3   ">
+        <nav aria-label="breadcrumb " class="rounded-3 bg-light nav-category">
             <ol class="breadcrumb p-1 ">
-                <li class="breadcrumb-item"><a class="text-decoration-none" href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Bridge</li>
+                <li class="breadcrumb-item text-link"><a class="text-decoration-none" href="#">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">Bridge</li>
             </ol>
         </nav>
     </div>
@@ -63,20 +69,20 @@
 
     </div>
     <div class="container pb-5">
-        <div class="table-responsive">
-            <table class="table table-striped table-hover table-bordered" data-bs-spy="scroll">
+        <div class="table-responsive scroll-bar">
+            <table class="table table-striped table-hover table-bordered table-default" data-bs-spy="scroll">
                 <thead>
                     <tr>
                         <th scope="col" colspan="1">#</th>
-                        <th class="text-primary" scope="col" colspan="4">recipe.name</th>
-                        <th class="text-primary" scope="col" colspan="4">template.name</th>
-                        <th class="text-primary" scope="col" colspan="4">sql_template</th>
-                        <th class="text-primary" scope="col" colspan="2">action</th>
+                        <th class="col-title" scope="col" colspan="4">recipe.name</th>
+                        <th class="col-title" scope="col" class="name" colspan="1">template.name</th>
+                        <th class="col-title" scope="col" colspan="4">sql_template</th>
+                        <th class="col-title" scope="col" colspan="2"></th>
                     </tr>
                     <tr>
                         <th scope="col" colspan="1"></th>
                         <th scope="col" colspan="4"><input class="form-control" /></th>
-                        <th scope="col" colspan="4"><input class="form-control" /></th>
+                        <th scope="col" colspan="1" class="name"><input class="form-control" /></th>
                         <th scope="col" colspan="4"><input class="form-control" /></th>
                         <th scope="col" colspan="2">
 
@@ -85,161 +91,144 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="col" colspan="1">1</th>
-                        <th scope="col" colspan="4">kjasf434hadfasd-3434h1k234h-4343</th>
-                        <th scope="col" colspan="4">Tiktok Ads</th>
-                        <th scope="col" colspan="4">Some description</th>
-                        <th scope="col" colspan="2">
+                        <td scope="col" colspan="1">1</td>
+                        <td scope="col" colspan="4">kjasf434hadfasd-3434h1k234h-4343</td>
+                        <td scope="col" colspan="1" class="name">Tiktok Ads</td>
+                        <td scope="col" colspan="4">Some description</td>
+                        <td scope="col" colspan="2" class="btn-res">
                             <!-- <div class=""> -->
-                            <button class="p-0 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                                    <path
-                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
-                                    <path
-                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
-                                </svg>
-                            </button>
                             <button class="p-0 mx-2 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                                    <path
-                                        d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z" />
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.246 2.19333L13.806 3.75333C14.066 4.01333 14.066 4.43333 13.806 4.69333L12.586 5.91333L10.086 3.41333L11.306 2.19333C11.4327 2.06667 11.5993 2 11.7727 2C11.946 2 12.1127 2.06 12.246 2.19333ZM1.99927 11.5V14H4.49927L11.8726 6.62667L9.3726 4.12667L1.99927 11.5ZM3.94593 12.6667H3.3326V12.0533L9.3726 6.01333L9.98593 6.62667L3.94593 12.6667Z"
+                                        fill="#2F80ED" />
                                 </svg>
+
                             </button>
                             <button class="p-0 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                                    <path
-                                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.66671 2H6.33337L5.66671 2.66667H3.33337V4H12.6667V2.66667H10.3334L9.66671 2ZM10.6667 6V12.6667H5.33337V6H10.6667ZM4.00004 4.66667H12V12.6667C12 13.4 11.4 14 10.6667 14H5.33337C4.60004 14 4.00004 13.4 4.00004 12.6667V4.66667Z"
+                                        fill="#2F80ED" />
                                 </svg>
+
                             </button>
                             <!-- </div> -->
-                        </th>
+                        </td>
                     </tr>
                     <tr>
-                        <th scope="col" colspan="1">1</th>
-                        <th scope="col" colspan="4">kjasf434hadfasd-3434h1k234h-4343</th>
-                        <th scope="col" colspan="4">Tiktok Ads</th>
-                        <th scope="col" colspan="4">Some description</th>
-                        <th scope="col" colspan="2">
-                            <button class="p-0 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                                    <path
-                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
-                                    <path
-                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
-                                </svg>
-                            </button>
+                        <td scope="col" colspan="1">1</td>
+                        <td scope="col" colspan="4">kjasf434hadfasd-3434h1k234h-4343</td>
+                        <td scope="col" colspan="1" class="name">Tiktok Ads</td>
+                        <td scope="col" colspan="4">Some description</td>
+                        <td scope="col" colspan="2" class="btn-res">
+                            <!-- <div class=""> -->
                             <button class="p-0 mx-2 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                                    <path
-                                        d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z" />
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.246 2.19333L13.806 3.75333C14.066 4.01333 14.066 4.43333 13.806 4.69333L12.586 5.91333L10.086 3.41333L11.306 2.19333C11.4327 2.06667 11.5993 2 11.7727 2C11.946 2 12.1127 2.06 12.246 2.19333ZM1.99927 11.5V14H4.49927L11.8726 6.62667L9.3726 4.12667L1.99927 11.5ZM3.94593 12.6667H3.3326V12.0533L9.3726 6.01333L9.98593 6.62667L3.94593 12.6667Z"
+                                        fill="#2F80ED" />
                                 </svg>
+
                             </button>
                             <button class="p-0 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                                    <path
-                                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.66671 2H6.33337L5.66671 2.66667H3.33337V4H12.6667V2.66667H10.3334L9.66671 2ZM10.6667 6V12.6667H5.33337V6H10.6667ZM4.00004 4.66667H12V12.6667C12 13.4 11.4 14 10.6667 14H5.33337C4.60004 14 4.00004 13.4 4.00004 12.6667V4.66667Z"
+                                        fill="#2F80ED" />
                                 </svg>
+
                             </button>
-                        </th>
+                            <!-- </div> -->
+                        </td>
                     </tr>
                     <tr>
-                        <th scope="col" colspan="1">1</th>
-                        <th scope="col" colspan="4">kjasf434hadfasd-3434h1k234h-4343</th>
-                        <th scope="col" colspan="4">Tiktok Ads</th>
-                        <th scope="col" colspan="4">Some description</th>
-                        <th scope="col" colspan="2">
-                            <button class="p-0 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                                    <path
-                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
-                                    <path
-                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
-                                </svg>
-                            </button>
+                        <td scope="col" colspan="1">1</td>
+                        <td scope="col" colspan="4">kjasf434hadfasd-3434h1k234h-4343</td>
+                        <td scope="col" colspan="1" class="name">Tiktok Ads</td>
+                        <td scope="col" colspan="4">Some description</td>
+                        <td scope="col" colspan="2" class="btn-res">
+                            <!-- <div class=""> -->
                             <button class="p-0 mx-2 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                                    <path
-                                        d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z" />
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.246 2.19333L13.806 3.75333C14.066 4.01333 14.066 4.43333 13.806 4.69333L12.586 5.91333L10.086 3.41333L11.306 2.19333C11.4327 2.06667 11.5993 2 11.7727 2C11.946 2 12.1127 2.06 12.246 2.19333ZM1.99927 11.5V14H4.49927L11.8726 6.62667L9.3726 4.12667L1.99927 11.5ZM3.94593 12.6667H3.3326V12.0533L9.3726 6.01333L9.98593 6.62667L3.94593 12.6667Z"
+                                        fill="#2F80ED" />
                                 </svg>
+
                             </button>
                             <button class="p-0 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                                    <path
-                                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.66671 2H6.33337L5.66671 2.66667H3.33337V4H12.6667V2.66667H10.3334L9.66671 2ZM10.6667 6V12.6667H5.33337V6H10.6667ZM4.00004 4.66667H12V12.6667C12 13.4 11.4 14 10.6667 14H5.33337C4.60004 14 4.00004 13.4 4.00004 12.6667V4.66667Z"
+                                        fill="#2F80ED" />
                                 </svg>
+
                             </button>
-                        </th>
+                            <!-- </div> -->
+                        </td>
                     </tr>
                     <tr>
-                        <th scope="col" colspan="1">1</th>
-                        <th scope="col" colspan="4">kjasf434hadfasd-3434h1k234h-4343</th>
-                        <th scope="col" colspan="4">Tiktok Ads</th>
-                        <th scope="col" colspan="4">Some description</th>
-                        <th scope="col" colspan="2">
-                            <button class="p-0 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                                    <path
-                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
-                                    <path
-                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
-                                </svg>
-                            </button>
+                        <td scope="col" colspan="1">1</td>
+                        <td scope="col" colspan="4">kjasf434hadfasd-3434h1k234h-4343</td>
+                        <td scope="col" colspan="1" class="name">Tiktok Ads</td>
+                        <td scope="col" colspan="4">Some description</td>
+                        <td scope="col" colspan="2" class="btn-res">
+                            <!-- <div class=""> -->
                             <button class="p-0 mx-2 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                                    <path
-                                        d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z" />
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.246 2.19333L13.806 3.75333C14.066 4.01333 14.066 4.43333 13.806 4.69333L12.586 5.91333L10.086 3.41333L11.306 2.19333C11.4327 2.06667 11.5993 2 11.7727 2C11.946 2 12.1127 2.06 12.246 2.19333ZM1.99927 11.5V14H4.49927L11.8726 6.62667L9.3726 4.12667L1.99927 11.5ZM3.94593 12.6667H3.3326V12.0533L9.3726 6.01333L9.98593 6.62667L3.94593 12.6667Z"
+                                        fill="#2F80ED" />
                                 </svg>
+
                             </button>
                             <button class="p-0 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                                    <path
-                                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.66671 2H6.33337L5.66671 2.66667H3.33337V4H12.6667V2.66667H10.3334L9.66671 2ZM10.6667 6V12.6667H5.33337V6H10.6667ZM4.00004 4.66667H12V12.6667C12 13.4 11.4 14 10.6667 14H5.33337C4.60004 14 4.00004 13.4 4.00004 12.6667V4.66667Z"
+                                        fill="#2F80ED" />
                                 </svg>
+
                             </button>
-                        </th>
+                            <!-- </div> -->
+                        </td>
                     </tr>
                     <tr>
-                        <th scope="col" colspan="1">1</th>
-                        <th scope="col" colspan="4">kjasf434hadfasd-3434h1k234h-4343</th>
-                        <th scope="col" colspan="4">Tiktok Ads</th>
-                        <th scope="col" colspan="4">Some description</th>
-                        <th scope="col" colspan="2">
-                            <button class="p-0 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                                    <path
-                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
-                                    <path
-                                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
-                                </svg>
-                            </button>
+                        <td scope="col" colspan="1">1</td>
+                        <td scope="col" colspan="4">kjasf434hadfasd-3434h1k234h-4343</td>
+                        <td scope="col" colspan="1" class="name">Tiktok Ads</td>
+                        <td scope="col" colspan="4">Some description</td>
+                        <td scope="col" colspan="2" class="btn-res">
+                            <!-- <div class=""> -->
                             <button class="p-0 mx-2 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                                    <path
-                                        d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z" />
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.246 2.19333L13.806 3.75333C14.066 4.01333 14.066 4.43333 13.806 4.69333L12.586 5.91333L10.086 3.41333L11.306 2.19333C11.4327 2.06667 11.5993 2 11.7727 2C11.946 2 12.1127 2.06 12.246 2.19333ZM1.99927 11.5V14H4.49927L11.8726 6.62667L9.3726 4.12667L1.99927 11.5ZM3.94593 12.6667H3.3326V12.0533L9.3726 6.01333L9.98593 6.62667L3.94593 12.6667Z"
+                                        fill="#2F80ED" />
                                 </svg>
+
                             </button>
                             <button class="p-0 btn btn-link">
-                                <svg color="#2F80ED" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                                    <path
-                                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.66671 2H6.33337L5.66671 2.66667H3.33337V4H12.6667V2.66667H10.3334L9.66671 2ZM10.6667 6V12.6667H5.33337V6H10.6667ZM4.00004 4.66667H12V12.6667C12 13.4 11.4 14 10.6667 14H5.33337C4.60004 14 4.00004 13.4 4.00004 12.6667V4.66667Z"
+                                        fill="#2F80ED" />
                                 </svg>
+
                             </button>
-                        </th>
+                            <!-- </div> -->
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -269,7 +258,7 @@
             <p class="m-0">© Recipes 2023</p>
             <p class="m-0">Powered by Recipes</p>
         </div>
-       </footer>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

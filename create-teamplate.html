@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/main.css">
+</head>
+
+<body>
+    <header class="bg-dark">
+        <nav class="container navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white fs-5" href="#">Recipes Management</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-0" style="margin : 0 !important">
+                        <li class="nav-item">
+                            <a class="nav-link active  text-active" aria-current="page" href="#">Recipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Template</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Bridge</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-0" style="margin : 0 !important">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Docs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-3  bg-light rounded-3">
+        <nav aria-label="breadcrumb bg-light">
+            <ol class="breadcrumb p-1 ">
+                <li class="breadcrumb-item"><a class="text-decoration-none" href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Template</li>
+                <li class="breadcrumb-item " aria-current="page">Create</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="container mt-4">
+        <h2 class="fw-bold">Create Template</h2>
+        <button class="btn btn-outline-secondary">Cancel</button>
+        <button class="btn text-white btn-success-custom">Save</button>
+    </div>
+    <div class="container mt-4 pb-5">
+        <div class="mb-4 divider"></div>
+        <form action="">
+            <div class="mb-3 row">
+                <label for="name" class="col-sm-2 col-form-label text-end">Name</label>
+                <div class="col-sm-9">
+                    <input type="text" placeholder="type here" class="form-control" id="name" value="">
+                </div>
+            </div>
+            <div class="mb-4 row">
+                <label for="version" class="col-sm-2 col-form-label text-end">Version</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="version" placeholder="type here">
+                </div>
+            </div>
+
+        </form>
+        <div class="mb-4 divider"></div>
+        <div class="row">
+            <div class="col-xl-8 border-end pe-4">
+                <p class="m-0 fw-bold text-center">SQL Template</p>
+                <button class="btn btn-warning text-white my-4">Format SQL</button>
+              <textarea name="" id="sql_text" class="w-100 text-white bg-theme container-textarea" ></textarea>     
+            </div>
+            <div class="col-xl-4 ps-4">
+                <p class="m-0 fw-bold text-center">Definition</p>
+                <button class="btn btn-primary  my-4">Generate Definition</button>
+                <div class="result bg-theme text-white container-textarea">
+                    {
+                        "input-tables": [{
+                                 "identifier": "google_ads_ad_raw",
+                                 "origin": {
+                                         "type": "extract",
+                                         "name": "google-ads"
+                                    }
+                           }
+                         ],
+                       "output-tables": [{
+                                  "identifier": "google_ads_ad_cleaned",
+                                  "meta": {
+                                          "label": "cleaned-table"
+                                    }
+                           }
+                         ]
+                  }
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-light mt-5 py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <p class="m-0">© Recipes 2023</p>
+            <p class="m-0">Powered by Recipes</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
